@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript - Data Types</title>
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			//Datatypes in JavaScript
+			/* 8 Types:
+			1. number - integer, float,exponential
+			2. string
+			3. Boolean
+			4. BigInt()
+			5. undefined
+			6. null
+			7. symbol()
+			8. Object - Object, Date(),Math(),Array()
+			*/
+			//1. number - integer, float,exponential
+			//integer
+			var a = 10;
+			document.write(a+"<br>");
+			document.write(typeof(a)+"<br>");//number
+			//float
+			var b=2.5;
+			document.write(b+"<br>");
+			document.write(typeof(b)+"<br>");//number
+			//exponential
+			var c = 1234e5;
+			document.write(c+"<br>");
+			document.write(typeof(c)+"<br>");//number
+			var d = 1234e-5;
+			document.write(d+"<br>");
+			document.write(typeof(d)+"<br>");//number
+			//2. String
+			var e = 'sru';
+			var f = "oopjs";
+			document.write(e,f+"<br>");
+			document.write(typeof(e), typeof(f)+"<br>");//string
+			//3. Boolean
+			var g = true;
+			var h = false;
+			document.write(g,h+"<br>");
+			document.write(typeof(g), typeof(h)+"<br>");//boolean
+			//4.BigInt()
+			var i = BigInt(124587895556562255212);
+			document.write(i+"<br>");
+			document.write(typeof(i)+"<br>");//bigint
+			//5. undefined
+			var j;
+			document.write(j+"<br>");
+			document.write(typeof(j)+"<br>");//undefined
+			var k=undefined;
+			document.write(k+"<br>");
+			document.write(typeof(k)+"<br>");//undefined
+			//6.null
+			var l = ' ';
+			document.write(l+"<br>");
+			document.write(typeof(l)+"<br>");//string
+			//7. Symbol()
+			/*A “symbol” represents a unique identifier.
+			A value of this type can be created using Symbol()*/
+			const sym = Symbol("sru");
+			document.write(typeof(sym)+"<br/>"); // "symbol"
+			//Example 2
+			let id = Symbol();
+			let id1 = Symbol("id");
+			let id2 = Symbol("id");
+			document.write(id1 == id2);//false
+			//8. object - Object,Math,Date,Array
+			//1.Object
+			var student={
+					name:"SRU",
+					rollno:1234,
+					subject:'OOPJS',
+					marks:10
+			};
+			document.write(student.name+"<br/>");//SRU
+			document.write(Object.keys(student)+"<br/>");
+			document.write(Object.values(student)+"<br/>");
+			document.write(typeof(student)+"<br/>");//object
+
+			//2. Math
+			document.write(Math.PI+"<br/>");//3.14...
+			document.write(Math.sqrt(25)+"<br>");//5
+			document.write(Math.pow(2,5)+"<br>");//32
+			//3. Date
+			var d = new Date()
+			document.write(d+"<br>");
+			document.write(d.getFullYear()+"<br>");
+			document.write(d.getMonth()+"<br>");//0-jan,1-feb
+			//4.Array()
+			//Continious Memory allocation of similler elements
+			var n = [4,2,1,6];
+			document.write(n[0]+"<br/>");//4
+			document.write(n[5]+"<br/>");//undefined
+			document.write(n[3]+"<br/>");//6
+			var fruits = ["apple","banana","orange","cherry"];
+			document.write(fruits.length+"<br/>");//4
+			document.write(fruits[1]+"<br/>");//banana
+			for(i=0;i<fruits.length;i++){
+				document.write(fruits[i]+"<br/>");
+			}
+		</script>
+	</body>
+</html>
